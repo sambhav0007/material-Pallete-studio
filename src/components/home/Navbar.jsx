@@ -1,12 +1,13 @@
+import { NavLink } from "react-router-dom";
 import { ShoppingCart, User, Search, Phone } from "lucide-react";
 
 const PRODUCT_CATEGORIES = [
-  "Curtains & Furnishings",
-  "Mattresses",
-  "Decorative Panels",
-  "Wall Surfaces & Cladding",
-  "Flooring Solutions",
-  "Home Furnishing Materials",
+  { label: "Curtains & Furnishings", path: "/curtains-furnishings" },
+  { label: "Mattresses", path: "/mattresses" },
+  { label: "Decorative Panels", path: "/decorative-panels" },
+  { label: "Wall Surfaces & Cladding", path: "/wall-surfaces-cladding" },
+  { label: "Flooring Solutions", path: "/flooring-solutions" },
+  { label: "Home Furnishing Materials", path: "/home-furnishing-materials" },
 ];
 
 const Navbar = () => {
@@ -18,15 +19,14 @@ const Navbar = () => {
           
           {/* LEFT */}
           <div className="flex items-center gap-6">
-            {/* LOGO */}
             <div className="flex items-center gap-3">
               <img
                 src="/src/assets/logo.png"
-                alt=""
+                alt="Material Palette"
                 className="h-10 w-auto object-contain"
               />
               <span className="font-bold text-lg tracking-wide">
-                MATERIAL PALETTE Studio 
+                MATERIAL PALETTE Studio
               </span>
             </div>
 
@@ -43,7 +43,7 @@ const Navbar = () => {
             </button>
           </div>
 
-          {/* CENTER SEARCH */}
+          {/* SEARCH */}
           <div className="flex-1 mx-8">
             <div className="relative">
               <input
@@ -73,18 +73,19 @@ const Navbar = () => {
         <div className="max-w-7xl mx-auto px-6">
           <nav className="flex items-center gap-8 text-sm font-medium py-3">
             {PRODUCT_CATEGORIES.map((item) => (
-              <button
-                key={item}
-                className="
-                  relative px-1
-                  hover:text-black
-                  after:absolute after:left-0 after:-bottom-1
-                  after:h-2px after:w-0 after:bg-black
-                  hover:after:w-full after:transition-all
-                "
+              <NavLink
+                key={item.path}
+                to={item.path}
+                className={({ isActive }) =>
+                  `relative px-1 transition
+                   ${isActive ? "text-black font-semibold" : "text-black/80 hover:text-black"}
+                   after:absolute after:left-0 after:-bottom-1
+                   after:h-2px after:bg-black after:transition-all
+                   ${isActive ? "after:w-full" : "after:w-0 hover:after:w-full"}`
+                }
               >
-                {item}
-              </button>
+                {item.label}
+              </NavLink>
             ))}
           </nav>
         </div>
