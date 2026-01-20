@@ -9,7 +9,7 @@ export default function WhyChooseUs() {
         <div>
           <h2 className="text-4xl font-semibold leading-snug text-gray-900">
             What Makes <br />
-            Material Depot <br />
+            Material Pallete Studio <br />
             the Right Choice?
           </h2>
         </div>
@@ -20,7 +20,7 @@ export default function WhyChooseUs() {
             
             {/* Image */}
             <img
-              src="/src/assets/testimonial-room.jpg"
+              src="/src/assets/Reviewimg.jpg"
               alt="Customer Interior"
               className="w-full h-64 object-cover"
             />
@@ -69,7 +69,7 @@ export default function WhyChooseUs() {
 
           <div>
             <h3 className="text-5xl font-bold">100K+</h3>
-            <p className="text-sm text-gray-600 mt-1">Designs</p>
+            <p className="text-sm text-gray-600 mt-1 justify-center">Designs</p>
           </div>
 
           <div>

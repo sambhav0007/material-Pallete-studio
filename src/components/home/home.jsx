@@ -1,7 +1,7 @@
 import { lazy, Suspense } from "react";
 import HeroSlider from "./HeroSlider.jsx";
 
-// Lazy-loaded sections (PATHS FIXED)
+// Lazy-loaded sections
 const Calculatecost = lazy(() => import("./CalculateYourCost.jsx"));
 const CategoryButtons = lazy(() => import("./CategoryButtons.jsx"));
 const CategoryButtons2 = lazy(() => import("./CategoryButton2.jsx"));
@@ -33,8 +33,7 @@ export default function Home() {
         <section className="py-20">
           <CostCalculatorSection />
         </section>
-
-        {/* FOOTER — MUST BE LAST */}
+        {/* FOOTER */}
         <Footer />
       </Suspense>
     </main>

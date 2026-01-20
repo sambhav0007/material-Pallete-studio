@@ -7,7 +7,7 @@ export default function Footer() {
         {/* BRAND + VISION */}
         <div>
           <img
-            src="/src/assets/logo.png"
+            src="/src/assets/logo1.png"
             alt="Material Palette Studio"
             className="h-10 mb-4"
           />
@@ -34,12 +34,12 @@ export default function Footer() {
           </h4>
 
           <ul className="space-y-2 text-sm">
-            <li>Curtains & Furnishings</li>
-            <li>Mattresses</li>
-            <li>Decorative Panels</li>
-            <li>Wall Surfaces & Cladding</li>
-            <li>Flooring Solutions</li>
-            <li>Home Furnishing Materials</li>
+            <li><a href="./Pages/curtainsFurnishing">Curtains & Furnishings</a></li>
+            <li><a href="./Pages/mattresses">Mattresses</a></li>
+            <li><a href="./Pages/panels">Decorative Panels</a></li>
+            <li><a href="./Pages/wallSurfaces">Wall Surfaces & Cladding</a></li>
+            <li><a href="./Pages/flooring">Flooring Solutions</a></li>
+            <li><a href="./Pages/homeFurnishing">Home Furnishing Materials</a></li>
           </ul>
         </div>
 
