@@ -96,6 +96,25 @@ export default function Footer() {
               </Link>
             </li>
           </ul>
+          <div className="mt-6 py-2 border-t border-gray-700">
+          <h4 className="text-white font-semibold mb-4">
+            Follow US
+          </h4>
+          <div className="flex justify-center sm:justify-start space-x-4 mt-2">
+            <a href="https://www.facebook.com/" className="text-gray-400 hover:text-white">
+              <img src="/src/assets/facebook-icon.png" alt="Facebook" className="w-6 h-6" />
+            </a>
+            <a href="https://www.instagram.com/" className="text-gray-400 hover:text-white">
+              <img src="/src/assets/instagram-icon.png" alt="Instagram" className="w-6 h-6" />
+            </a>
+            <a href="https://www.linkedin.com/" className="text-gray-400 hover:text-white">
+              <img src="/src/assets/linkedin-icon.png" alt="LinkedIn" className="w-6 h-6" />
+            </a>
+            <a href="https://twitter.com/" className="text-gray-400 hover:text-white">
+            <img src="/src/assets/twitter-icon.png" alt="Twitter" className="w-6 h-6" />
+            </a>
+          </div>
+        </div>
         </div>
 
         {/* COMPANY INFO */}

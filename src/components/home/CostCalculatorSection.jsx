@@ -22,15 +22,20 @@ export default function CostCalculatorSection() {
         </h2>
 
         <p className="mt-3 text-sm sm:text-base text-gray-600 max-w-2xl mx-auto">
-          Discover how Material Palette Studio simplifies interior decisions through expertise, technology, and transparency. <br />
+          Discover how Material Palette Studio simplifies interior decisions through expertise, technology, and transparency.
         </p>
       </div>
 
       {/* ===== COLLAGE FEATURE STRIP ===== */}
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-
-          {/* TILE */}
+        <div
+          className="
+            grid-cols-2              /* ✅ MOBILE: 2x2 grid */
+            sm:grid-cols-2
+            md:grid-cols-4
+            gap-4 sm:gap-6
+          "
+        >
           {[
             {
               img: "/src/assets/Wooden Laminates.jpg",
@@ -65,36 +70,38 @@ export default function CostCalculatorSection() {
                 md:nth-4:mt-12
               "
             >
-              {/* IMAGE */}
-              <img
-                src={item.img}
-                alt=""
-                className="
-                  w-full h-52 sm:h-56 object-cover
-                  border border-black/10
-                "
-              />
-
-              {/* OVERLAY */}
-              <div
-                className="
-                  absolute inset-0
-                  bg-linear-to-t from-black/70 via-black/30 to-transparent
-                  opacity-100 sm:opacity-0
-                  sm:group-hover:opacity-100
-                  transition-opacity duration-300
-                  flex flex-col justify-end p-4
-                "
-              >
-                <button
+              {/* IMAGE WRAPPER — FIXED ASPECT RATIO ON MOBILE */}
+              <div className="relative w-full aspect-square sm:aspect-4/3">
+                <img
+                  src={item.img}
+                  alt=""
                   className="
-                    bg-white text-black text-sm font-medium
-                    px-4 py-2 rounded-md w-fit
-                    hover:bg-yellow-300 transition
+                    absolute inset-0 w-full h-full object-cover
+                    border border-black/10
+                  "
+                />
+
+                {/* OVERLAY */}
+                <div
+                  className="
+                    absolute inset-0
+                    bg-linear-to-t from-black/70 via-black/30 to-transparent
+                    opacity-100 sm:opacity-0
+                    sm:group-hover:opacity-100
+                    transition-opacity duration-300
+                    flex flex-col justify-end p-4
                   "
                 >
-                  {item.cta}
-                </button>
+                  <button
+                    className="
+                      bg-white text-black text-sm font-medium
+                      px-4 py-2 rounded-md w-fit
+                      hover:bg-yellow-300 transition
+                    "
+                  >
+                    {item.cta}
+                  </button>
+                </div>
               </div>
 
               {/* TITLE */}
@@ -103,7 +110,6 @@ export default function CostCalculatorSection() {
               </p>
             </div>
           ))}
-
         </div>
       </div>
     </section>
