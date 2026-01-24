@@ -13,7 +13,7 @@ const categories = [
   { name: "Decorative Panels", icon: Sofa },
   { name: "Wall Surfaces & Cladding", icon: BedDouble },
   { name: "Flooring Solutions", icon: Umbrella },
-  { name: "Home Furnishing Materials", icon: Umbrella },
+  { name: "Home Furnishing", icon: Umbrella },
 ];
 
 const categoryImages = {
@@ -57,7 +57,7 @@ const categoryImages = {
     { title: "Planters", image: "/src/assets/outdoor5.jpg" },
     { title: "Outdoor Decor", image: "/src/assets/outdoor6.jpg" },
   ],
-  "Home Furnishing Materials": [
+  "Home Furnishing": [
     { title: "Fabrics", image: "/src/assets/fabrics1.jpg" },
     { title: "Cushions", image: "/src/assets/fabrics2.jpg" },
   ],

@@ -2,35 +2,62 @@ import { Star } from "lucide-react";
 
 export default function WhyChooseUs() {
   return (
-    <section className="bg-[#f7f1e7] py-20">
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
+    <section className="bg-[#f7f1e7] py-16 sm:py-20">
+      <div className="
+        max-w-7xl mx-auto px-4 sm:px-6
+        grid grid-cols-1 lg:grid-cols-3
+        gap-14 lg:gap-12 items-center
+      ">
         
         {/* LEFT TEXT */}
-        <div>
-          <h2 className="text-4xl font-semibold leading-snug text-gray-900">
-            What Makes <br />
-            Material Pallete Studio <br />
-            the Right Choice?
+        <div className="text-center lg:text-left">
+          <h2 className="
+            text-3xl sm:text-4xl
+            font-semibold leading-snug text-gray-900
+            tracking-tight
+          ">
+            <span className="block animate-fade-in">
+              What Makes
+            </span>
+            <span className="block animate-fade-in delay-100">
+              Material Pallete Studio
+            </span>
+            <span className="block animate-fade-in delay-200">
+              the Right Choice?
+            </span>
           </h2>
         </div>
 
         {/* CENTER TESTIMONIAL CARD */}
         <div className="flex justify-center">
-          <div className="bg-white rounded-xl shadow-lg w-full max-w-sm overflow-hidden">
+          <div className="
+            bg-white rounded-xl shadow-lg
+            w-full max-w-sm overflow-hidden
+            transition-all duration-300
+            hover:shadow-xl hover:-translate-y-1
+          ">
             
             {/* Image */}
             <img
               src="/src/assets/Reviewimg.jpg"
               alt="Customer Interior"
-              className="w-full h-64 object-cover"
+              className="
+                w-full
+                aspect-4/3 sm:aspect-3/2
+                object-cover
+              "
             />
 
             {/* Content */}
-            <div className="p-6">
-              <p className="text-sm text-gray-700 leading-relaxed mb-4">
-                “I wholeheartedly recommend Material Depot to all architects
+            <div className="p-5 sm:p-6">
+              <p className="
+                text-sm text-gray-700 leading-relaxed mb-4
+                relative
+              ">
+                <span className="absolute -left-2 top-0 text-xl opacity-20">“</span>
+                I wholeheartedly recommend Material Depot to all architects
                 and designers. Found a brand, got quotes, ordered hassle-free,
-                and smooth delivery. Impressive!”
+                and smooth delivery. Impressive!
               </p>
 
               <div className="flex items-center justify-between">
@@ -61,19 +88,27 @@ export default function WhyChooseUs() {
         </div>
 
         {/* RIGHT STATS */}
-        <div className="flex flex-col gap-14 items-start  justify-end lg:items-end text-gray-900">
-          <div>
-            <h3 className="text-5xl font-bold">10K+</h3>
+        <div className="
+          flex flex-row lg:flex-col
+          justify-between lg:justify-end
+          gap-8 sm:gap-12
+          text-gray-900
+          text-center lg:text-right
+        ">
+          <div className="transition-transform hover:scale-105">
+            <h3 className="text-4xl sm:text-5xl font-bold">10K+</h3>
             <p className="text-sm text-gray-600 mt-1">Happy Customers</p>
           </div>
 
-          <div>
-            <h3 className="text-5xl font-bold">100K+</h3>
-            <p className="text-sm text-gray-600 mt-1 justify-center">Designs</p>
+          <div className="transition-transform hover:scale-105">
+            <h3 className="text-4xl sm:text-5xl font-bold">100K+</h3>
+            <p className="text-sm text-gray-600 mt-1 text-center lg:text-right">
+              Designs
+            </p>
           </div>
 
-          <div>
-            <h3 className="text-5xl font-bold">1K+</h3>
+          <div className="transition-transform hover:scale-105">
+            <h3 className="text-4xl sm:text-5xl font-bold">1K+</h3>
             <p className="text-sm text-gray-600 mt-1">Architects</p>
           </div>
         </div>

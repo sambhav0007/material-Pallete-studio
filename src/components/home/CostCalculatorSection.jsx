@@ -22,8 +22,7 @@ export default function CostCalculatorSection() {
         </h2>
 
         <p className="mt-3 text-sm sm:text-base text-gray-600 max-w-2xl mx-auto">
-          Discover how Material Palette Studio simplifies interior decisions
-          through expertise, technology, and transparency.
+          Discover how Material Palette Studio simplifies interior decisions through expertise, technology, and transparency. <br />
         </p>
       </div>
 

@@ -1,15 +1,22 @@
+import { Link } from "react-router-dom";
+
 export default function Footer() {
   return (
     <footer className="bg-[#1c1c1c] text-gray-300">
       {/* ================= MAIN FOOTER ================= */}
-      <div className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-
+      <div
+        className="
+          max-w-7xl mx-auto px-6 py-16
+          grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4
+          gap-12
+        "
+      >
         {/* BRAND + VISION */}
-        <div>
+        <div className="text-center sm:text-left">
           <img
             src="/src/assets/logo1.png"
             alt="Material Palette Studio"
-            className="h-10 mb-4"
+            className="h-10 mb-4 mx-auto sm:mx-0"
           />
 
           <h3 className="text-white font-semibold text-lg mb-3">
@@ -28,23 +35,47 @@ export default function Footer() {
         </div>
 
         {/* PRODUCT CATEGORIES */}
-        <div>
+        <div className="text-center sm:text-left">
           <h4 className="text-white font-semibold mb-4">
             Product Categories
           </h4>
 
-          <ul className="space-y-2 text-sm">
-            <li><a href="./Pages/curtainsFurnishing">Curtains & Furnishings</a></li>
-            <li><a href="./Pages/mattresses">Mattresses</a></li>
-            <li><a href="./Pages/panels">Decorative Panels</a></li>
-            <li><a href="./Pages/wallSurfaces">Wall Surfaces & Cladding</a></li>
-            <li><a href="./Pages/flooring">Flooring Solutions</a></li>
-            <li><a href="./Pages/homeFurnishing">Home Furnishing Materials</a></li>
+          <ul className="space-y-3 text-sm">
+            <li>
+              <Link to="/curtains-furnishings" className="hover:underline">
+                Curtains & Furnishings
+              </Link>
+            </li>
+            <li>
+              <Link to="/mattresses" className="hover:underline">
+                Mattresses
+              </Link>
+            </li>
+            <li>
+              <Link to="/decorative-panels" className="hover:underline">
+                Decorative Panels
+              </Link>
+            </li>
+            <li>
+              <Link to="/wall-surfaces-cladding" className="hover:underline">
+                Wall Surfaces & Cladding
+              </Link>
+            </li>
+            <li>
+              <Link to="/flooring-solutions" className="hover:underline">
+                Flooring Solutions
+              </Link>
+            </li>
+            <li>
+              <Link to="/home-furnishing-materials" className="hover:underline">
+                Home Furnishing Materials
+              </Link>
+            </li>
           </ul>
         </div>
 
         {/* COMPANY INFO */}
-        <div>
+        <div className="sm:col-span-2 lg:col-span-1 text-center sm:text-left">
           <h4 className="text-white font-semibold mb-4">
             Studio & Company
           </h4>
@@ -65,9 +96,18 @@ export default function Footer() {
 
       {/* ================= BOTTOM BAR ================= */}
       <div className="border-t border-gray-700">
-        <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400 gap-4">
+        <div
+          className="
+            max-w-7xl mx-auto px-6 py-6
+            flex flex-col sm:flex-row
+            justify-between items-center
+            text-sm text-gray-400
+            gap-3 text-center sm:text-left
+          "
+        >
           <span>
-            © {new Date().getFullYear()} Material Palette Studio Pvt. Ltd. All rights reserved.
+            © {new Date().getFullYear()} Material Palette Studio Pvt. Ltd.
+            All rights reserved.
           </span>
 
           <span>

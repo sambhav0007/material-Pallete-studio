@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import { ShoppingCart, User, Search, Phone, Menu, X } from "lucide-react";
+import { Search, Phone, Menu, X } from "lucide-react";
 
 const PRODUCT_CATEGORIES = [
   { label: "Curtains & Furnishings", path: "/curtains-furnishings" },
@@ -19,22 +19,22 @@ const Navbar = () => {
       {/* ================= TOP BAR ================= */}
       <div className="bg-white border-b">
         <div className="max-w-7xl mx-auto flex items-center justify-between px-4 md:px-6 py-3">
-          
+
           {/* LEFT */}
-          <div className="flex items-center gap-3 md:gap-6">
-            {/* LOGO */}
-            <div className="fixed top-0 left-0 p-4 flex items-center gap-3 z-50">
-           <img
-             src="/src/assets/logo1.png"
-            alt="Logo"
-            className="h-9 md:h-10 w-auto object-contain"
-            />
-             <span className="font-bold text-sm md:text-lg text-[#4B5966] tracking-wide">
-             MATERIAL PALETTE Studio
-            </span>
+          <div className="flex items-center gap-3 md:gap-6 min-w-0">
+            {/* LOGO (FIXED OVERLAP ISSUE) */}
+            <div className="flex items-center gap-3 shrink-0">
+              <img
+                src="/src/assets/logo1.png"
+                alt="Logo"
+                className="h-9 md:h-10 w-auto object-contain"
+              />
+              <span className="font-bold text-sm md:text-lg text-[#4B5966] tracking-wide whitespace-nowrap">
+                MATERIAL PALETTE Studio
+              </span>
             </div>
 
-            {/* VISIT STORE — NOW VISIBLE ON MOBILE */}
+            {/* VISIT STORE */}
             <button className="text-xs md:text-sm font-medium hover:underline">
               <a
                 href="https://maps.app.goo.gl/FgEs5KHzY7JZSupD8"
@@ -45,6 +45,7 @@ const Navbar = () => {
               </a>
             </button>
 
+            {/* TOOLS (DESKTOP ONLY) */}
             <button className="hidden md:block text-sm font-medium hover:underline">
               TOOLS
             </button>
@@ -64,7 +65,7 @@ const Navbar = () => {
 
           {/* RIGHT */}
           <div className="flex items-center gap-2 md:gap-4">
-            {/* SHOP ON CALL — ALWAYS VISIBLE */}
+            {/* SHOP ON CALL */}
             <a
               href="tel:+1234567890"
               className="bg-brandYellow px-3 md:px-4 py-2 rounded-full text-xs md:text-sm font-semibold flex items-center gap-2 hover:bg-opacity-90 transition-all"
@@ -73,7 +74,7 @@ const Navbar = () => {
               <span className="hidden sm:inline">Shop on call</span>
             </a>
 
-            {/* MOBILE HAMBURGER */}
+            {/* MOBILE MENU */}
             <button
               onClick={() => setOpen(!open)}
               className="md:hidden p-2 rounded-lg border"
@@ -108,7 +109,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* ================= CATEGORY BAR (MOBILE DROPDOWN) ================= */}
+      {/* ================= CATEGORY BAR (MOBILE) ================= */}
       {open && (
         <div className="md:hidden bg-yellow-300 border-b">
           <div className="px-6 py-4 flex flex-col gap-4">
