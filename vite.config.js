@@ -7,6 +7,7 @@ export default defineConfig({
   server: {
     allowedHosts: [
       'unkingly-inextensible-tova.ngrok-free.dev' // Add your ngrok host here
-    ]
+    ],
+    base: "/"
   }
 })
