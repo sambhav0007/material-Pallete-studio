@@ -135,7 +135,7 @@ export default function Footer() {
           </span>
 
           <span>
-            Designed as a Elan-tech pvt limited Initiative
+            Designed as per Elan-tech pvt limited Initiative
           </span>
         </div>
       </div>

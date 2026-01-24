@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import { Search, Phone, Menu, MapPin } from "lucide-react";
+import { Search, Phone, Menu, MapPin, X} from "lucide-react";
 
 const PRODUCT_CATEGORIES = [
   { label: "Curtains & Furnishings", path: "/curtains-furnishings" },
@@ -28,7 +28,7 @@ const Navbar = () => {
                 alt="Logo"
                 className="h-9 md:h-10 w-auto object-contain"
               />
-              <span className="font-bold text-sm md:text-lg text-[#4B5966] tracking-wide whitespace-nowrap">
+              <span className="font-bold text-sm md:text-lg hover:scale-x-105 text-[#4B5966] tracking-wide whitespace-nowrap">
                 MATERIAL PALETTE Studio
               </span>
             </div>
@@ -41,16 +41,7 @@ const Navbar = () => {
               TOOLS
             </button>
           </div>
-          <button className="px-2 font-medium hover:scale-x-105">
-          <a
-            href="https://maps.app.goo.gl/FgEs5KHzY7JZSupD8"
-            target="_blank"
-            rel="noopener noreferrer"            
-            className="flex items-center gap-2"
-          >
-             <MapPin className="w-4 h-4 flex items-center gap-2" />
-            </a>
-          </button>
+          
           {/* SEARCH — DESKTOP ONLY */}
           <div className="hidden md:flex flex-1 mx-8">
             <div className="relative w-full">
@@ -68,11 +59,22 @@ const Navbar = () => {
             {/* SHOP ON CALL */}
             <a
               href="tel:+1234567890"
-              className="bg-brandYellow px-3 md:px-4 py-2 rounded-full text-xs md:text-sm font-semibold flex items-center gap-2 hover:bg-opacity-90 transition-all"
+              className="bg-brandYellow px-3 md:px-4 py-2 rounded-full text-xs md:text-sm font-semibold flex items-center gap-2 hover:scale-x-105 transition-all"
             >
               <Phone className="w-4 h-4" />
               <span className="hidden sm:inline">Shop on call</span>
             </a>
+
+            <button className="px-2 font-medium hover:scale-x-105">
+          <a
+            href="https://maps.app.goo.gl/FgEs5KHzY7JZSupD8"
+            target="_blank"
+            rel="noopener noreferrer"            
+            className="flex items-center gap-2"
+          >
+             <MapPin className="w-4 h-4 flex items-center gap-4 hover:scale-x-110" />
+            </a>
+          </button>
 
             {/* MOBILE MENU */}
             <button
@@ -111,7 +113,7 @@ const Navbar = () => {
 
       {/* ================= CATEGORY BAR (MOBILE) ================= */}
       {open && (
-        <div className="md:hidden bg-yellow-300 border-b">
+        <div className="md:hidden fixed inset-x-0 top-72px bg-yellow-300 border-b z-40">
           <div className="px-6 py-4 flex flex-col gap-4">
             {PRODUCT_CATEGORIES.map((item) => (
               <NavLink

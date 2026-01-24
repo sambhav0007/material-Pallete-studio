@@ -90,7 +90,7 @@ export default function HeroSlider() {
 
                   <button
                     className="
-                      mt-4 bg-white text-black px-5 py-2 rounded-lg w-fit
+                      mt-4 text-black px-5 py-2 rounded-lg w-fit
                       transition-all duration-200
                       hover:scale-105 active:scale-95
                     "
