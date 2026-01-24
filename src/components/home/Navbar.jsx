@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import { Search, Phone, Menu, X } from "lucide-react";
+import { Search, Phone, Menu, MapPin } from "lucide-react";
 
 const PRODUCT_CATEGORIES = [
   { label: "Curtains & Furnishings", path: "/curtains-furnishings" },
@@ -22,7 +22,6 @@ const Navbar = () => {
 
           {/* LEFT */}
           <div className="flex items-center gap-3 md:gap-6 min-w-0">
-            {/* LOGO (FIXED OVERLAP ISSUE) */}
             <div className="flex items-center gap-3 shrink-0">
               <img
                 src="/src/assets/logo1.png"
@@ -35,22 +34,23 @@ const Navbar = () => {
             </div>
 
             {/* VISIT STORE */}
-            <button className="text-xs md:text-sm font-medium hover:underline">
-              <a
-                href="https://maps.app.goo.gl/FgEs5KHzY7JZSupD8"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                VISIT STORE
-              </a>
-            </button>
+
 
             {/* TOOLS (DESKTOP ONLY) */}
-            <button className="hidden md:block text-sm font-medium hover:underline">
+            <button className="hidden md:block text-sm font-medium hover:scale-x-105">
               TOOLS
             </button>
           </div>
-
+          <button className="px-2 font-medium hover:scale-x-105">
+          <a
+            href="https://maps.app.goo.gl/FgEs5KHzY7JZSupD8"
+            target="_blank"
+            rel="noopener noreferrer"            
+            className="flex items-center gap-2"
+          >
+             <MapPin className="w-4 h-4 flex items-center gap-2" />
+            </a>
+          </button>
           {/* SEARCH — DESKTOP ONLY */}
           <div className="hidden md:flex flex-1 mx-8">
             <div className="relative w-full">
@@ -64,7 +64,7 @@ const Navbar = () => {
           </div>
 
           {/* RIGHT */}
-          <div className="flex items-center gap-2 md:gap-4">
+          <div className="flex items-center gap-4 md:gap-4">
             {/* SHOP ON CALL */}
             <a
               href="tel:+1234567890"

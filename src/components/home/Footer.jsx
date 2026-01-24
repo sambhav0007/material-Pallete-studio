@@ -74,6 +74,30 @@ export default function Footer() {
           </ul>
         </div>
 
+              <div className="text-center sm:text-left">
+          <h4 className="text-white font-semibold mb-4">
+            Quick Links
+          </h4>
+
+          <ul className="space-y-3 text-sm">
+             <li>
+              <Link to="/Faqs" className="hover:underline">
+                Faqs
+              </Link>
+            </li>
+            <li>
+              <Link to="/Aboutus" className="hover:underline">
+                About us
+              </Link>
+            </li>
+            <li>
+              <Link to="/Contact" className="hover:underline">
+                Contact us
+              </Link>
+            </li>
+          </ul>
+        </div>
+
         {/* COMPANY INFO */}
         <div className="sm:col-span-2 lg:col-span-1 text-center sm:text-left">
           <h4 className="text-white font-semibold mb-4">
@@ -111,7 +135,7 @@ export default function Footer() {
           </span>
 
           <span>
-            Designed as a Real-Material Interior Experience System
+            Designed as a Elan-tech pvt limited Initiative
           </span>
         </div>
       </div>
