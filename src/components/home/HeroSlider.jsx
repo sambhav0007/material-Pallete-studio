@@ -1,5 +1,9 @@
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import slide1_ from "../../assets/slide1_.jpg";
+import slide2_ from "../../assets/slide2_.jpg";
+import slide3_ from "../../assets/slide3_.jpg";
+import slide4_ from "../../assets/slide4_.jpg";
 
 const slides = [
   {
@@ -7,7 +11,7 @@ const slides = [
     description:
       "Discover our curated wallpaper collection, crafted to elevate every corner beautifully.",
     button: "Explore Our Collection",
-    image: "../assets/slide1_.jpg",
+    image: slide1_,
     bg: "bg-[#7a554a]",
   },
   {
@@ -15,7 +19,7 @@ const slides = [
     description:
       "Premium finishes and textures that transform your interiors.",
     button: "View Designs",
-    image: "../assets/slide2_.jpg",
+    image: slide2_,
     bg: "bg-[#6b4c3b]",
   },
   {
@@ -23,7 +27,7 @@ const slides = [
     description:
       "Crafted for modern living with classic appeal.",
     button: "Browse Collection",
-    image: "../assets/slide3_.jpg",
+    image: slide3_,
     bg: "bg-[#8b5e4a]",
   },
   {
@@ -31,7 +35,7 @@ const slides = [
     description:
       "Elevate your interiors with our exclusive wallpaper designs.",
     button: "Shop Now",
-    image: "../assets/slide4_.jpg",
+    image: slide4_,
     bg: "bg-[#5c3a2e]",
   },
 ];

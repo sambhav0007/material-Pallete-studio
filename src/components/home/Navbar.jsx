@@ -24,7 +24,7 @@ const Navbar = () => {
           <div className="flex items-center gap-3 md:gap-6 min-w-0">
             <div className="flex items-center gap-3 shrink-0">
               <img
-                src="../assets/logo1.png"
+                src="../../assets/logo1.png"
                 alt="Logo"
                 className="h-9 md:h-10 w-auto object-contain"
               />

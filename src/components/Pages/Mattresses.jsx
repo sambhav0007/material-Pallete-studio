@@ -1,13 +1,16 @@
 import { useState } from "react";
 import { Heart, SlidersHorizontal, X } from "lucide-react";
 import { Link } from "react-router-dom";
+import bed1 from "../../assets/bed1.jpg";
+import bed2 from "../../assets/bed2.jpg";
+import bed3 from "../../assets/bed3.jpg";
 
 /* ================= MOCK DATA (REPLACE WITH API LATER) ================= */
 const PRODUCTS = [
   {
     id: 1,
     title: "White Comfortable Mattress",
-    image: "../assets/bed1.jpg",
+    image: bed1,
     priceSqft: 85,
     priceBox: 1320,
     discount: 40,
@@ -16,7 +19,7 @@ const PRODUCTS = [
   {
     id: 2,
     title: "Soft Foam Mattress",
-    image: "../assets/bed2.jpg",
+    image: bed2,
     priceSqft: 109,
     priceBox: 2730,
     discount: 40,
@@ -25,7 +28,7 @@ const PRODUCTS = [
   {
     id: 3,
     title: "Mattress with Adjustable Firmness",
-    image: "../assets/bed3.jpg",
+    image: bed3,
     priceSqft: 322,
     priceBox: 2497,
     discount: 35,

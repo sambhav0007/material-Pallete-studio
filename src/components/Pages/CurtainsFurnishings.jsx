@@ -1,13 +1,14 @@
 import { useState } from "react";
 import { Heart, SlidersHorizontal, X } from "lucide-react";
 import { Link } from "react-router-dom";
+import floorTile from "../../assets/Floor Tile.jpg";
 
 /* ================= MOCK DATA ================= */
 const PRODUCTS = [
   {
     id: 1,
     title: "Stylish Tropical Florals Curtainsfurnishings TL 05273 A",
-    image: "../assets/Floor tile.jpg",
+    image: floorTile,
     priceSqft: 85,
     priceBox: 1320,
     discount: 40,
@@ -16,7 +17,7 @@ const PRODUCTS = [
   {
     id: 2,
     title: "Modern styled and fixed curtains",
-    image: "../assets/Floor tile.jpg",
+    image: floorTile,
     priceSqft: 109,
     priceBox: 2730,
     discount: 40,
@@ -25,7 +26,7 @@ const PRODUCTS = [
   {
     id: 3,
     title: "Elegant Pastel Shades Curtainsfurnishings TL 05274 B",
-    image: "../assets/Floor tile.jpg",
+    image: floorTile,
     priceSqft: 322,
     priceBox: 2497,
     discount: 35,

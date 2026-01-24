@@ -1,4 +1,8 @@
 import { Home, LayoutGrid, Package } from "lucide-react";
+import woodenLaminates from "../../assets/Wooden Laminates.jpg";
+import bed2 from "../../assets/bed2.jpg";
+import slide2 from "../../assets/slide2.jpg";
+import featureInstallation from "../../assets/feature-installation.jpg";
 
 export default function CostCalculatorSection() {
   return (
@@ -38,22 +42,22 @@ export default function CostCalculatorSection() {
         >
           {[
             {
-              img: "../assets/Wooden Laminates.jpg",
+              img: woodenLaminates,
               title: "Personalized Design Consultations by Experts",
               cta: "Book Consultation",
             },
             {
-              img: "../assets/bed2.jpg",
+              img: bed2,
               title: "Exclusive In-store Offers And Discounts",
               cta: "View Offers",
             },
             {
-              img: "../assets/slide2.jpg",
+              img: slide2,
               title: "Trusted by 10,000+ Homeowners & Designers",
               cta: "See Projects",
             },
             {
-              img: "../assets/feature-installation.jpg",
+              img: featureInstallation,
               title: "Door-step delivery & installation support",
               cta: "Know More",
             },
@@ -74,7 +78,6 @@ export default function CostCalculatorSection() {
               <div className="relative w-full aspect-square sm:aspect-4/3">
                 <img
                   src={item.img}
-                  alt=""
                   className="
                     absolute inset-0 w-full h-full object-cover
                     border border-black/10

@@ -14,7 +14,7 @@ export default function Footer() {
         {/* BRAND + VISION */}
         <div className="text-center sm:text-left">
           <img
-            src="../assets/logo1.png"
+            src="../../assets/logo1.png"
             alt="Material Palette Studio"
             className="h-10 mb-4 mx-auto sm:mx-0"
           />

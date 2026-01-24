@@ -1,13 +1,16 @@
 import { useState } from "react";
 import { Heart, SlidersHorizontal, X } from "lucide-react";
 import { Link } from "react-router-dom";
+import slide1 from "../../assets/slide1.jpg";
+import slide2 from "../../assets/slide2.jpg";
+import slide3 from "../../assets/slide3.jpg";
 
 /* ================= MOCK DATA ================= */
 const PRODUCTS = [
   {
     id: 1,
     title: "Tropical Wall Tile TL 05553 Vivid Fusion",
-    image: "../assets/slide1.jpg",
+    image: slide1,
     priceSqft: 85,
     priceBox: 1320,
     discount: 40,
@@ -16,7 +19,7 @@ const PRODUCTS = [
   {
     id: 2,
     title: "Hexagonal Wall & Floor Tile TL 05273 B",
-    image: "../assets/slide2.jpg",
+    image: slide2,
     priceSqft: 109,
     priceBox: 2730,
     discount: 40,
@@ -25,7 +28,7 @@ const PRODUCTS = [
   {
     id: 3,
     title: "Moroccan Floor & Wall Tile TL 05053",
-    image: "../assets/slide3.jpg",
+    image: slide3,
     priceSqft: 322,
     priceBox: 2497,
     discount: 35,
