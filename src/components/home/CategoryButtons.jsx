@@ -6,6 +6,20 @@ import {
   BedDouble,
   Umbrella,
 } from "lucide-react";
+import solidColorLaminates from "../../assets/Solid color laminates.jpg";
+import woodenLaminates from "../../assets/Wooden Laminates.jpg";
+import backsplashTile from "../../assets/Backsplash tile.jpg";
+import floorTile from "../../assets/Floor Tile.jpg";
+import quartzCountertop from "../../assets/Quartz  Countertop.jpg";
+import cabinetry from "../../assets/Cabinetry.jpg";
+import bed1 from "../../assets/bed1.jpg";
+import bed2 from "../../assets/bed2.jpg";
+import bed3 from "../../assets/bed3.jpg";
+import slide1 from "../../assets/slide1.jpg";
+import slide2 from "../../assets/slide2.jpg";
+import slide3 from "../../assets/slide3.jpg";
+import slide4 from "../../assets/slide4.jpg";
+import slide5 from "../../assets/slide5.jpg";
 
 const categories = [
   { name: "Curtains & Furnishings", icon: Home },
@@ -18,52 +32,52 @@ const categories = [
 
 const categoryImages = {
   "Curtains & Furnishings": [
-    { title: "Solid color laminates", image: "../../assets/Solid color laminates.jpg" },
-    { title: "Wooden Laminates", image: "../../assets/Wooden Laminates.jpg" },
-    { title: "Backsplash tile", image: "../../assets/Backsplash tile.jpg" },
-    { title: "Floor Tile", image: "../../assets/Floor Tile.jpg" },
-    { title: "Quartz Countertop", image: "../../assets/Quartz  Countertop.jpg" },
-    { title: "Cabinetry", image: "../../assets/Cabinetry.jpg" },
+    { title: "Solid color laminates", image: solidColorLaminates },
+    { title: "Wooden Laminates", image: woodenLaminates },
+    { title: "Backsplash tile", image: backsplashTile },
+    { title: "Floor Tile", image: floorTile },
+    { title: "Quartz Countertop", image: quartzCountertop },
+    { title: "Cabinetry", image: cabinetry },
   ],
   "Mattresses": [
-    { title: "Wall Tiles", image: "../../assets/bed1.jpg" },
-    { title: "Vanity Units", image: "../../assets/bed2.jpg" },
-    { title: "Sanitaryware", image: "../../assets/bed3.jpg" },
-    { title: "Faucets & Fittings", image: "../../assets/bed1.jpg" },
-    { title: "Shower Enclosures", image: "../../assets/bed2.jpg" },
-    { title: "Bathroom Accessories", image: "../../assets/bed3.jpg" },
+    { title: "Wall Tiles", image: bed1 },
+    { title: "Vanity Units", image: bed2 },
+    { title: "Sanitaryware", image: bed3 },
+    { title: "Faucets & Fittings", image: bed1 },
+    { title: "Shower Enclosures", image: bed2 },
+    { title: "Bathroom Accessories", image: bed3 },
   ],
   "Decorative Panels": [
-    { title: "Wallpaper", image: "../../assets/slide1.jpg" },
-    { title: "TV Units", image: "../../assets/slide2.jpg" },
-    { title: "Sofas", image: "../../assets/slide3.jpg" },
-    { title: "Coffee Tables", image: "../../assets/slide4.jpg" },
-    { title: "Rugs & Carpets", image: "../../assets/slide5.jpg" },
-    { title: "Curtains & Blinds", image: "../../assets/slide1.jpg" },
+    { title: "Wallpaper", image: slide1 },
+    { title: "TV Units", image: slide2 },
+    { title: "Sofas", image: slide3 },
+    { title: "Coffee Tables", image: slide4 },
+    { title: "Rugs & Carpets", image: slide5 },
+    { title: "Curtains & Blinds", image: slide1 },
   ],
   "Wall Surfaces & Cladding": [
-    { title: "Wardrobes", image: "../../assets/Floor Tile.jpg" },
-    { title: "Beds", image: "../../assets/Floor Tile.jpg" },
-    { title: "Mattresses", image: "../../assets/Floor Tile.jpg" },
-    { title: "Bedside Tables", image: "../../assets/Floor Tile.jpg" },
-    { title: "Dressers", image: "../../assets/Floor Tile.jpg" },
-    { title: "Lighting", image: "../../assets/Floor Tile.jpg" },
+    { title: "Wardrobes", image: floorTile },
+    { title: "Beds", image: floorTile },
+    { title: "Mattresses", image: floorTile },
+    { title: "Bedside Tables", image: floorTile },
+    { title: "Dressers", image: floorTile },
+    { title: "Lighting", image: floorTile },
   ],
   "Flooring Solutions": [
-    { title: "Deck Flooring", image: "../../assets/Floor Tile.jpg" },
-    { title: "Outdoor Panels", image: "../../assets/Floor Tile.jpg" },
-    { title: "Garden Furniture", image: "../../assets/Floor Tile.jpg" },
-    { title: "Outdoor Lighting", image: "../../assets/Floor Tile.jpg" },
-    { title: "Planters", image: "../../assets/Floor Tile.jpg" },
-    { title: "Outdoor Decor", image: "../../assets/Floor Tile.jpg" },
+    { title: "Deck Flooring", image: floorTile },
+    { title: "Outdoor Panels", image: floorTile },
+    { title: "Garden Furniture", image: floorTile },
+    { title: "Outdoor Lighting", image: floorTile },
+    { title: "Planters", image: floorTile },
+    { title: "Outdoor Decor", image: floorTile },
   ],
   "Home Furnishing": [
-    { title: "Fabrics", image: "../../assets/Wooden Laminates.jpg" },
-    { title: "Cushions", image: "../../assets/Wooden Laminates.jpg" },
-    { title: "Throws", image: "../../assets/Wooden Laminates.jpg" },
-    { title: "Table Linens", image: "../../assets/Wooden Laminates.jpg" },
-    { title: "Upholstery Materials", image: "../../assets/Wooden Laminates.jpg" },
-    { title: "Curtain Fabrics", image: "../../assets/Wooden Laminates.jpg" },
+    { title: "Fabrics", image: woodenLaminates },
+    { title: "Cushions", image: woodenLaminates },
+    { title: "Throws", image: woodenLaminates },
+    { title: "Table Linens", image: woodenLaminates },
+    { title: "Upholstery Materials", image: woodenLaminates },
+    { title: "Curtain Fabrics", image: woodenLaminates },
   ],
 };
 

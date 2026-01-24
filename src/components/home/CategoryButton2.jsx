@@ -1,4 +1,5 @@
 import { Star } from "lucide-react";
+import reviewImg from "../../assets/Reviewimg.jpg";
 
 export default function WhyChooseUs() {
   return (
@@ -39,7 +40,7 @@ export default function WhyChooseUs() {
             
             {/* Image */}
             <img
-              src="../assets/Reviewimg.jpg"
+              src={reviewImg}
               alt="Customer Interior"
               className="
                 w-full

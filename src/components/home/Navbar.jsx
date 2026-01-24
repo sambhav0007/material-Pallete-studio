@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { Search, Phone, Menu, MapPin, X} from "lucide-react";
+import logo from "../../assets/logo1.png";
 
 const PRODUCT_CATEGORIES = [
   { label: "Curtains & Furnishings", path: "/curtains-furnishings" },
@@ -24,7 +25,7 @@ const Navbar = () => {
           <div className="flex items-center gap-3 md:gap-6 min-w-0">
             <div className="flex items-center gap-3 shrink-0">
               <img
-                src="../../assets/logo1.png"
+                src={logo}
                 alt="Logo"
                 className="h-9 md:h-10 w-auto object-contain"
               />

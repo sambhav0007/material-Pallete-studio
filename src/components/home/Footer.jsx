@@ -1,4 +1,9 @@
 import { Link } from "react-router-dom";
+import logo from "../../assets/logo1.png";
+import facebookIcon from "../../assets/facebook-icon.png";
+import instagramIcon from "../../assets/instagram-icon.png";
+import linkedinIcon from "../../assets/linkedin-icon.png";
+import twitterIcon from "../../assets/twitter-icon.png";
 
 export default function Footer() {
   return (
@@ -14,7 +19,7 @@ export default function Footer() {
         {/* BRAND + VISION */}
         <div className="text-center sm:text-left">
           <img
-            src="../../assets/logo1.png"
+            src={logo}
             alt="Material Palette Studio"
             className="h-10 mb-4 mx-auto sm:mx-0"
           />
@@ -102,16 +107,16 @@ export default function Footer() {
           </h4>
           <div className="flex justify-center sm:justify-start space-x-4 mt-2">
             <a href="https://www.facebook.com/" className="text-gray-400 hover:text-white">
-              <img src="../assets/facebook-icon.png" alt="Facebook" className="w-6 h-6" />
+              <img src={facebookIcon} alt="Facebook" className="w-6 h-6" />
             </a>
             <a href="https://www.instagram.com/" className="text-gray-400 hover:text-white">
-              <img src="../assets/instagram-icon.png" alt="Instagram" className="w-6 h-6" />
+              <img src={instagramIcon} alt="Instagram" className="w-6 h-6" />
             </a>
             <a href="https://www.linkedin.com/" className="text-gray-400 hover:text-white">
-              <img src="../assets/linkedin-icon.png" alt="LinkedIn" className="w-6 h-6" />
+              <img src={linkedinIcon} alt="LinkedIn" className="w-6 h-6" />
             </a>
             <a href="https://twitter.com/" className="text-gray-400 hover:text-white">
-            <img src="../assets/twitter-icon.png" alt="Twitter" className="w-6 h-6" />
+            <img src={twitterIcon} alt="Twitter" className="w-6 h-6" />
             </a>
           </div>
         </div>

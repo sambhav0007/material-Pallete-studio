@@ -1,3 +1,5 @@
+import slide5 from "../../assets/slide5.jpg";
+
 export default function CalculateYourCost() {
   return (
     <section className="w-full bg-[#f6f1e8]">
@@ -11,7 +13,7 @@ export default function CalculateYourCost() {
         
         {/* Background Image */}
         <img
-          src="../../assets/slide5.jpg"
+          src={slide5}
           alt="Calculate Interior Cost"
           loading="lazy"
           className="
