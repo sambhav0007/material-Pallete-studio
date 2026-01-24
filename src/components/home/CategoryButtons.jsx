@@ -60,6 +60,10 @@ const categoryImages = {
   "Home Furnishing": [
     { title: "Fabrics", image: "/src/assets/fabrics1.jpg" },
     { title: "Cushions", image: "/src/assets/fabrics2.jpg" },
+    { title: "Throws", image: "/src/assets/fabrics3.jpg" },
+    { title: "Table Linens", image: "/src/assets/fabrics4.jpg" },
+    { title: "Upholstery Materials", image: "/src/assets/fabrics5.jpg" },
+    { title: "Curtain Fabrics", image: "/src/assets/fabrics6.jpg" },
   ],
 };
 
