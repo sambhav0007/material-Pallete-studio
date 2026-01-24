@@ -7,7 +7,7 @@ const slides = [
     description:
       "Discover our curated wallpaper collection, crafted to elevate every corner beautifully.",
     button: "Explore Our Collection",
-    image: "/src/assets/slide1_.jpg",
+    image: "../assets/slide1_.jpg",
     bg: "bg-[#7a554a]",
   },
   {
@@ -15,7 +15,7 @@ const slides = [
     description:
       "Premium finishes and textures that transform your interiors.",
     button: "View Designs",
-    image: "/src/assets/slide2_.jpg",
+    image: "../assets/slide2_.jpg",
     bg: "bg-[#6b4c3b]",
   },
   {
@@ -23,7 +23,7 @@ const slides = [
     description:
       "Crafted for modern living with classic appeal.",
     button: "Browse Collection",
-    image: "/src/assets/slide3_.jpg",
+    image: "../assets/slide3_.jpg",
     bg: "bg-[#8b5e4a]",
   },
   {
@@ -31,7 +31,7 @@ const slides = [
     description:
       "Elevate your interiors with our exclusive wallpaper designs.",
     button: "Shop Now",
-    image: "/src/assets/slide4_.jpg",
+    image: "../assets/slide4_.jpg",
     bg: "bg-[#5c3a2e]",
   },
 ];

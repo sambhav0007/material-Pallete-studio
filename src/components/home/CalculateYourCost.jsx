@@ -11,7 +11,7 @@ export default function CalculateYourCost() {
         
         {/* Background Image */}
         <img
-          src="/src/assets/slide5.jpg"
+          src="../assets/slide5.jpg"
           alt="Calculate Interior Cost"
           loading="lazy"
           className="

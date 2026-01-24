@@ -14,7 +14,7 @@ export default function Footer() {
         {/* BRAND + VISION */}
         <div className="text-center sm:text-left">
           <img
-            src="/src/assets/logo1.png"
+            src="../assets/logo1.png"
             alt="Material Palette Studio"
             className="h-10 mb-4 mx-auto sm:mx-0"
           />
@@ -102,16 +102,16 @@ export default function Footer() {
           </h4>
           <div className="flex justify-center sm:justify-start space-x-4 mt-2">
             <a href="https://www.facebook.com/" className="text-gray-400 hover:text-white">
-              <img src="/src/assets/facebook-icon.png" alt="Facebook" className="w-6 h-6" />
+              <img src="../assets/facebook-icon.png" alt="Facebook" className="w-6 h-6" />
             </a>
             <a href="https://www.instagram.com/" className="text-gray-400 hover:text-white">
-              <img src="/src/assets/instagram-icon.png" alt="Instagram" className="w-6 h-6" />
+              <img src="../assets/instagram-icon.png" alt="Instagram" className="w-6 h-6" />
             </a>
             <a href="https://www.linkedin.com/" className="text-gray-400 hover:text-white">
-              <img src="/src/assets/linkedin-icon.png" alt="LinkedIn" className="w-6 h-6" />
+              <img src="../assets/linkedin-icon.png" alt="LinkedIn" className="w-6 h-6" />
             </a>
             <a href="https://twitter.com/" className="text-gray-400 hover:text-white">
-            <img src="/src/assets/twitter-icon.png" alt="Twitter" className="w-6 h-6" />
+            <img src="../assets/twitter-icon.png" alt="Twitter" className="w-6 h-6" />
             </a>
           </div>
         </div>

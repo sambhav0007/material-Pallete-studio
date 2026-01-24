@@ -7,7 +7,7 @@ const PRODUCTS = [
   {
     id: 1,
     title: "Tropical Wall Tile TL 05553 Vivid Fusion",
-    image: "/src/assets/slide1.jpg",
+    image: "../assets/slide1.jpg",
     priceSqft: 85,
     priceBox: 1320,
     discount: 40,
@@ -16,7 +16,7 @@ const PRODUCTS = [
   {
     id: 2,
     title: "Hexagonal Wall & Floor Tile TL 05273 B",
-    image: "/src/assets/slide2.jpg",
+    image: "../assets/slide2.jpg",
     priceSqft: 109,
     priceBox: 2730,
     discount: 40,
@@ -25,7 +25,7 @@ const PRODUCTS = [
   {
     id: 3,
     title: "Moroccan Floor & Wall Tile TL 05053",
-    image: "/src/assets/slide3.jpg",
+    image: "../assets/slide3.jpg",
     priceSqft: 322,
     priceBox: 2497,
     discount: 35,

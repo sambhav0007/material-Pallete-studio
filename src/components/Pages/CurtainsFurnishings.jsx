@@ -7,7 +7,7 @@ const PRODUCTS = [
   {
     id: 1,
     title: "Stylish Tropical Florals Curtainsfurnishings TL 05273 A",
-    image: "/src/assets/Floor tile.jpg",
+    image: "../assets/Floor tile.jpg",
     priceSqft: 85,
     priceBox: 1320,
     discount: 40,
@@ -16,7 +16,7 @@ const PRODUCTS = [
   {
     id: 2,
     title: "Modern styled and fixed curtains",
-    image: "/src/assets/Floor tile.jpg",
+    image: "../assets/Floor tile.jpg",
     priceSqft: 109,
     priceBox: 2730,
     discount: 40,
@@ -25,7 +25,7 @@ const PRODUCTS = [
   {
     id: 3,
     title: "Elegant Pastel Shades Curtainsfurnishings TL 05274 B",
-    image: "/src/assets/Floor tile.jpg",
+    image: "../assets/Floor tile.jpg",
     priceSqft: 322,
     priceBox: 2497,
     discount: 35,

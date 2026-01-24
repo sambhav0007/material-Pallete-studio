@@ -7,7 +7,7 @@ const PRODUCTS = [
   {
     id: 1,
     title: "White Comfortable Mattress",
-    image: "/src/assets/bed1.jpg",
+    image: "../assets/bed1.jpg",
     priceSqft: 85,
     priceBox: 1320,
     discount: 40,
@@ -16,7 +16,7 @@ const PRODUCTS = [
   {
     id: 2,
     title: "Soft Foam Mattress",
-    image: "/src/assets/bed2.jpg",
+    image: "../assets/bed2.jpg",
     priceSqft: 109,
     priceBox: 2730,
     discount: 40,
@@ -25,7 +25,7 @@ const PRODUCTS = [
   {
     id: 3,
     title: "Mattress with Adjustable Firmness",
-    image: "/src/assets/bed3.jpg",
+    image: "../assets/bed3.jpg",
     priceSqft: 322,
     priceBox: 2497,
     discount: 35,

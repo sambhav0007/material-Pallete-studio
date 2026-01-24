@@ -38,22 +38,22 @@ export default function CostCalculatorSection() {
         >
           {[
             {
-              img: "/src/assets/Wooden Laminates.jpg",
+              img: "../assets/Wooden Laminates.jpg",
               title: "Personalized Design Consultations by Experts",
               cta: "Book Consultation",
             },
             {
-              img: "/src/assets/bed2.jpg",
+              img: "../assets/bed2.jpg",
               title: "Exclusive In-store Offers And Discounts",
               cta: "View Offers",
             },
             {
-              img: "/src/assets/slide2.jpg",
+              img: "../assets/slide2.jpg",
               title: "Trusted by 10,000+ Homeowners & Designers",
               cta: "See Projects",
             },
             {
-              img: "/src/assets/feature-installation.jpg",
+              img: "../assets/feature-installation.jpg",
               title: "Door-step delivery & installation support",
               cta: "Know More",
             },

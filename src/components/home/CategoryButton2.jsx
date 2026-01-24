@@ -39,7 +39,7 @@ export default function WhyChooseUs() {
             
             {/* Image */}
             <img
-              src="/src/assets/Reviewimg.jpg"
+              src="../assets/Reviewimg.jpg"
               alt="Customer Interior"
               className="
                 w-full
