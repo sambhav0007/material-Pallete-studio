@@ -1,14 +1,16 @@
 import { useState } from "react";
 import { Heart, SlidersHorizontal, X } from "lucide-react";
 import { Link } from "react-router-dom";
-import floorTile from "../../assets/Floor Tile.jpg";
+import slide1 from "../../assets/slide1.jpg";
+import slide2 from "../../assets/slide2.jpg";
+import slide3 from "../../assets/slide3.jpg";
 
-/* ================= MOCK DATA (REPLACE WITH API LATER) ================= */
+/* ================= MOCK DATA ================= */
 const PRODUCTS = [
   {
     id: 1,
     title: "Tropical Wall Tile TL 05553 Vivid Fusion",
-    image: floorTile,
+    image: slide1,
     priceSqft: 85,
     priceBox: 1320,
     discount: 40,
@@ -17,7 +19,7 @@ const PRODUCTS = [
   {
     id: 2,
     title: "Hexagonal Wall & Floor Tile TL 05273 B",
-    image: floorTile,
+    image: slide2,
     priceSqft: 109,
     priceBox: 2730,
     discount: 40,
@@ -26,7 +28,7 @@ const PRODUCTS = [
   {
     id: 3,
     title: "Moroccan Floor & Wall Tile TL 05053",
-    image: floorTile,
+    image: slide3,
     priceSqft: 322,
     priceBox: 2497,
     discount: 35,
@@ -37,13 +39,13 @@ const PRODUCTS = [
 /* ================= MAIN PAGE ================= */
 export default function FlooringSolutions() {
   const [sortBy, setSortBy] = useState("popular");
-  const [filterOpen, setFilterOpen] = useState(false);
+  const [filterOpen, setFilterOpen] = useState(false); 
 
   /* SORT LOGIC */
   const sortedProducts = [...PRODUCTS].sort((a, b) => {
     if (sortBy === "priceLow") return a.priceSqft - b.priceSqft;
     if (sortBy === "priceHigh") return b.priceSqft - a.priceSqft;
-    return a.id - b.id; // Popular default
+    return a.id - b.id;
   });
 
   return (
@@ -51,7 +53,7 @@ export default function FlooringSolutions() {
 
       {/* ================= BREADCRUMB ================= */}
       <p className="text-sm text-gray-500 mb-3">
-        <Link to="/" className="hover:underline hover:text-black transition">
+        <Link to="/" className="hover:underline hover:text-black">
           Home
         </Link>{" "}
         / Flooring Solutions
@@ -64,6 +66,7 @@ export default function FlooringSolutions() {
         </h1>
 
         <div className="flex items-center gap-3">
+
           {/* MOBILE FILTER BUTTON */}
           <button
             onClick={() => setFilterOpen(true)}
@@ -71,6 +74,15 @@ export default function FlooringSolutions() {
           >
             <SlidersHorizontal className="w-4 h-4" />
             Filters
+          </button>
+
+          {/* DESKTOP FILTER TOGGLE */}
+          <button
+            onClick={() => setFilterOpen((prev) => !prev)}
+            className="hidden lg:flex items-center gap-2 border px-4 py-2 rounded-full text-sm"
+          >
+            <SlidersHorizontal className="w-4 h-4" />
+            {filterOpen ? "Hide Filters" : "Show Filters"}
           </button>
 
           {/* SORT */}
@@ -87,20 +99,31 @@ export default function FlooringSolutions() {
       </div>
 
       {/* ================= LAYOUT ================= */}
-      <div className="grid grid-cols-12 gap-8">
+      <div className="grid grid-cols-12 gap-8 transition-all duration-300">
 
         {/* ================= FILTER SIDEBAR (DESKTOP) ================= */}
-        <aside className="hidden lg:block col-span-3 space-y-4">
-          <Filters />
-        </aside>
+        {filterOpen && (
+          <aside className="hidden lg:block col-span-3">
+            <div className="space-y-4 pt-2">
+              <Filters />
+            </div>
+          </aside>
+        )}
 
         {/* ================= PRODUCT GRID ================= */}
-        <section className="col-span-12 lg:col-span-9">
+        <section
+          className={`
+            col-span-12
+            ${filterOpen ? "lg:col-span-9" : "lg:col-span-12"}
+            transition-all duration-300
+          `}
+        >
           <p className="text-sm text-gray-500 mb-4">
             Showing 1–{sortedProducts.length} of 10094 products
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* DESKTOP = 4 COLUMNS */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {sortedProducts.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}
@@ -139,15 +162,19 @@ export default function FlooringSolutions() {
 function Filters() {
   return (
     <>
-      <FilterSection title="Price Range" />
-      <FilterSection title="Category" />
-      <FilterSection title="Series" />
-      <FilterSection title="Color" />
-      <FilterSection title="Finish" />
-      <FilterSection title="Approx Size (mm)" />
-      <FilterSection title="Thickness (mm)" />
-      <FilterSection title="Material" />
-      <FilterSection title="Application" />
+      {[
+        "Price Range",
+        "Category",
+        "Series",
+        "Color",
+        "Finish",
+        "Approx Size (mm)",
+        "Thickness (mm)",
+        "Material",
+        "Application",
+      ].map((title) => (
+        <FilterSection key={title} title={title} />
+      ))}
 
       <div className="flex items-center gap-3 pt-4">
         <input type="checkbox" />
@@ -177,10 +204,6 @@ function FilterSection({ title }) {
 function ProductCard({ product }) {
   return (
     <div className="relative group">
-      <button className="absolute top-3 right-3 bg-white rounded-full p-2 shadow">
-        <Heart className="w-4 h-4" />
-      </button>
-
       <img
         src={product.image}
         alt={product.title}

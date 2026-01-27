@@ -37,13 +37,13 @@ const PRODUCTS = [
 /* ================= MAIN PAGE ================= */
 export default function CurtainsFurnishings() {
   const [sortBy, setSortBy] = useState("popular");
-  const [filterOpen, setFilterOpen] = useState(false);
+  const [filterOpen, setFilterOpen] = useState(false); // desktop default open
 
   /* SORT LOGIC */
   const sortedProducts = [...PRODUCTS].sort((a, b) => {
     if (sortBy === "priceLow") return a.priceSqft - b.priceSqft;
     if (sortBy === "priceHigh") return b.priceSqft - a.priceSqft;
-    return a.id - b.id; // Popular (default)
+    return a.id - b.id;
   });
 
   return (
@@ -64,6 +64,7 @@ export default function CurtainsFurnishings() {
         </h1>
 
         <div className="flex items-center gap-3">
+
           {/* MOBILE FILTER BUTTON */}
           <button
             onClick={() => setFilterOpen(true)}
@@ -71,6 +72,15 @@ export default function CurtainsFurnishings() {
           >
             <SlidersHorizontal className="w-4 h-4" />
             Filters
+          </button>
+
+          {/* DESKTOP FILTER TOGGLE */}
+          <button
+            onClick={() => setFilterOpen((prev) => !prev)}
+            className="hidden lg:flex items-center gap-2 border px-4 py-2 rounded-full text-sm"
+          >
+            <SlidersHorizontal className="w-4 h-4" />
+            {filterOpen ? "Hide Filters" : "Show Filters"}
           </button>
 
           {/* SORT */}
@@ -87,20 +97,31 @@ export default function CurtainsFurnishings() {
       </div>
 
       {/* ================= LAYOUT ================= */}
-      <div className="grid grid-cols-12 gap-8">
+      <div className="grid grid-cols-12 gap-8 transition-all duration-300">
 
         {/* ================= FILTER SIDEBAR (DESKTOP) ================= */}
-        <aside className="hidden lg:block col-span-3 space-y-4">
-          <Filters />
-        </aside>
+        {filterOpen && (
+          <aside className="hidden lg:block col-span-3">
+            <div className="space-y-4 pt-2">
+              <Filters />
+            </div>
+          </aside>
+        )}
 
         {/* ================= PRODUCT GRID ================= */}
-        <section className="col-span-12 lg:col-span-9">
+        <section
+          className={`
+            col-span-12
+            ${filterOpen ? "lg:col-span-9" : "lg:col-span-12"}
+            transition-all duration-300
+          `}
+        >
           <p className="text-sm text-gray-500 mb-4">
             Showing 1–{sortedProducts.length} of 10094 products
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* TRUE 4-COLUMN DESKTOP GRID */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {sortedProducts.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}
@@ -112,7 +133,7 @@ export default function CurtainsFurnishings() {
       {filterOpen && (
         <div className="fixed inset-0 z-50 bg-black/40 lg:hidden">
           <div className="absolute right-0 top-0 h-full w-[85%] max-w-sm bg-white p-6 overflow-y-auto">
-            
+
             <div className="flex justify-between items-center mb-6">
               <h2 className="font-semibold text-lg">Filters</h2>
               <button onClick={() => setFilterOpen(false)}>
@@ -139,15 +160,19 @@ export default function CurtainsFurnishings() {
 function Filters() {
   return (
     <>
-      <FilterSection title="Price Range" />
-      <FilterSection title="Category" />
-      <FilterSection title="Series" />
-      <FilterSection title="Color" />
-      <FilterSection title="Finish" />
-      <FilterSection title="Approx Size (mm)" />
-      <FilterSection title="Thickness (mm)" />
-      <FilterSection title="Material" />
-      <FilterSection title="Application" />
+      {[
+        "Price Range",
+        "Category",
+        "Series",
+        "Color",
+        "Finish",
+        "Approx Size (mm)",
+        "Thickness (mm)",
+        "Material",
+        "Application",
+      ].map((title) => (
+        <FilterSection key={title} title={title} />
+      ))}
 
       <div className="flex items-center gap-3 pt-4">
         <input type="checkbox" />
@@ -177,11 +202,8 @@ function FilterSection({ title }) {
 function ProductCard({ product }) {
   return (
     <div className="relative group">
-      <button className="absolute top-3 right-3 bg-white rounded-full p-2 shadow">
-        <Heart className="w-4 h-4" />
-      </button>
-
-      <img
+      
+     <img
         src={product.image}
         alt={product.title}
         className="w-full h-64 object-cover rounded-md"

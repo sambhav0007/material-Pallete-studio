@@ -92,15 +92,17 @@ export default function HeroSlider() {
                     {slide.description}
                   </p>
 
-                  <button
-                    className="
-                      mt-4 text-black px-5 py-2 rounded-lg w-fit
-                      transition-all duration-200
-                      hover:scale-105 active:scale-95
-                    "
-                  >
-                    {slide.button}
-                  </button>
+           <button
+            className="
+             mt-4 bg-white text-black px-5 py-2 rounded-lg w-fit
+                    font-medium
+                transition-all duration-200
+                    hover:scale-105 hover:ring-4 hover:ring-white/30
+                    active:scale-95
+                  "
+                >
+                  {slide.button}
+                </button>
                 </div>
               </div>
 

@@ -23,16 +23,17 @@ const Navbar = () => {
 
           {/* LEFT */}
           <div className="flex items-center gap-3 md:gap-6 min-w-0">
-            <div className="flex items-center gap-3 shrink-0">
-              <img
-                src={logo}
-                alt="Logo"
-                className="h-9 md:h-10 w-auto object-contain"
-              />
-              <span className="font-bold text-sm md:text-lg hover:scale-x-105 text-[#4B5966] tracking-wide whitespace-nowrap">
-                MATERIAL PALETTE Studio
-              </span>
-            </div>
+            <NavLink to="/home" className="flex items-center gap-3 shrink-0">
+       <img
+    src={logo}
+    alt="Logo"
+    className="h-9 md:h-10 w-auto object-contain"
+  />
+     <span className="font-bold text-sm md:text-lg text-[#4B5966] tracking-wide whitespace-nowrap">
+     MATERIAL PALETTE Studio
+   </span>
+      </NavLink>
+
 
             {/* VISIT STORE */}
 
