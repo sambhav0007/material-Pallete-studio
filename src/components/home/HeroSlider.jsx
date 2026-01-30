@@ -83,7 +83,7 @@ export default function HeroSlider() {
                 />
 
                 {/* MOBILE TEXT OVERLAY */}
-                <div className="absolute inset-0 md:hidden bg-black/30 flex flex-col justify-end p-6 text-white">
+                <div className="absolute inset-0 md:hidden bg-black/30 flex flex-col justify-end p-6 pb-16 text-white">
                   <h1 className="text-2xl font-bold whitespace-pre-line">
                     {slide.title}
                   </h1>
@@ -137,21 +137,22 @@ export default function HeroSlider() {
 
       {/* LEFT ARROW */}
       <button
-        onClick={prevSlide}
-        className="absolute left-3 md:left-4 top-1/2 -translate-y-1/2 
-                   bg-white w-9 h-9 md:w-10 md:h-10 rounded-full shadow 
-                   flex items-center justify-center hover:scale-105 transition"
+       onClick={prevSlide}
+        className="hidden md:flex absolute left-3 md:left-4 top-1/2 -translate-y-1/2 
+             bg-white w-9 h-9 md:w-10 md:h-10 rounded-full shadow 
+             items-center justify-center hover:scale-105 transition"
       >
         <ChevronLeft />
       </button>
 
       {/* RIGHT ARROW */}
       <button
-        onClick={nextSlide}
-        className="absolute right-3 md:right-4 top-1/2 -translate-y-1/2 
-                   bg-white w-9 h-9 md:w-10 md:h-10 rounded-full shadow 
-                   flex items-center justify-center hover:scale-105 transition"
-      >
+       onClick={nextSlide}
+       className="hidden md:flex absolute right-3 md:right-4 top-1/2 -translate-y-1/2 
+             bg-white w-9 h-9 md:w-10 md:h-10 rounded-full shadow 
+             items-center justify-center hover:scale-105 transition"
+>
+
         <ChevronRight />
       </button>
 
