@@ -2,7 +2,7 @@ import slide5 from "../../assets/slide5.jpg";
 
 export default function CalculateYourCost() {
   return (
-    <section className="w-full bg-[#f6f1e8]">
+    <section className="w-full bg-[#EEF1F4]">
       {/* ================= HERO ================= */}
       <div className="
         relative
@@ -10,7 +10,7 @@ export default function CalculateYourCost() {
         min-h-130
         w-full overflow-hidden
       ">
-        
+
         {/* Background Image */}
         <img
           src={slide5}
@@ -74,9 +74,9 @@ export default function CalculateYourCost() {
 
       {/* ================= SUPPORTING STRIP ================= */}
 
-{/* ===== MOBILE KEYWORDS OVERLAY ===== */}
-<div
-  className="
+      {/* ===== MOBILE KEYWORDS OVERLAY ===== */}
+      <div
+        className="
     sm:hidden
     sticky bottom-4 z-20
     mx-auto w-[94%]
@@ -86,58 +86,58 @@ export default function CalculateYourCost() {
     flex justify-between items-center
     animate-fade-in
   "
->
-  {[
-    "Real Materials",
-    "Room-wise Clarity",
-    "Execution Ready",
-  ].map((item) => (
-    <span
-      key={item}
-      className="
+      >
+        {[
+          "Real Materials",
+          "Room-wise Clarity",
+          "Execution Ready",
+        ].map((item) => (
+          <span
+            key={item}
+            className="
         text-sm font-semibold
         whitespace-nowrap
         transition-all duration-200
         hover:scale-105
         active:scale-95
       "
-    >
-      {item}
-    </span>
-  ))}
-</div>
+          >
+            {item}
+          </span>
+        ))}
+      </div>
 
-{/* ===== DESKTOP SUPPORTING STRIP (UNCHANGED) ===== */}
-<div
-  className="
+      {/* ===== DESKTOP SUPPORTING STRIP (UNCHANGED) ===== */}
+      <div
+        className="
     hidden sm:grid
     max-w-7xl mx-auto px-4 sm:px-6
     py-12 sm:py-16
     grid-cols-3 gap-10
     text-center
   "
->
-  <div className="transition-transform hover:-translate-y-1">
-    <p className="text-lg font-semibold">Real Materials</p>
-    <p className="mt-2 text-sm text-gray-600">
-      All costs are derived from physically available materials.
-    </p>
-  </div>
+      >
+        <div className="transition-transform hover:-translate-y-1">
+          <p className="text-lg font-semibold">Real Materials</p>
+          <p className="mt-2 text-sm text-gray-600">
+            All costs are derived from physically available materials.
+          </p>
+        </div>
 
-  <div className="transition-transform hover:-translate-y-1">
-    <p className="text-lg font-semibold">Room-wise Clarity</p>
-    <p className="mt-2 text-sm text-gray-600">
-      Know exactly where your budget is being spent.
-    </p>
-  </div>
+        <div className="transition-transform hover:-translate-y-1">
+          <p className="text-lg font-semibold">Room-wise Clarity</p>
+          <p className="mt-2 text-sm text-gray-600">
+            Know exactly where your budget is being spent.
+          </p>
+        </div>
 
-  <div className="transition-transform hover:-translate-y-1">
-    <p className="text-lg font-semibold">Execution Ready</p>
-    <p className="mt-2 text-sm text-gray-600">
-      What you approve is exactly what gets delivered.
-    </p>
-  </div>
-</div>
+        <div className="transition-transform hover:-translate-y-1">
+          <p className="text-lg font-semibold">Execution Ready</p>
+          <p className="mt-2 text-sm text-gray-600">
+            What you approve is exactly what gets delivered.
+          </p>
+        </div>
+      </div>
 
     </section>
   );

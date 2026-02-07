@@ -3,25 +3,25 @@ import reviewImg from "../../assets/Reviewimg.jpg";
 
 export default function WhyChooseUs() {
   return (
-    <section className="bg-[#f7f1e7] py-16 sm:py-20">
+    <section className="bg-[#4A5B6A] py-16 sm:py-20">
       <div className="
         max-w-7xl mx-auto px-4 sm:px-6
         grid grid-cols-1 lg:grid-cols-3
         gap-14 lg:gap-12 items-center
       ">
-        
+
         {/* LEFT TEXT */}
         <div className="text-center lg:text-left">
           <h2 className="
             text-3xl sm:text-4xl
-            font-semibold leading-snug text-gray-900
+            font-semibold leading-snug text-white
             tracking-tight
           ">
             <span className="block animate-fade-in">
               What Makes
             </span>
             <span className="block animate-fade-in delay-100">
-              Material Pallete Studio
+              Material Palette Studio
             </span>
             <span className="block animate-fade-in delay-200">
               the Right Choice?
@@ -37,7 +37,7 @@ export default function WhyChooseUs() {
             transition-all duration-300
             hover:shadow-xl hover:-translate-y-1
           ">
-            
+
             {/* Image */}
             <img
               src={reviewImg}
@@ -93,24 +93,24 @@ export default function WhyChooseUs() {
           flex flex-row lg:flex-col
           justify-between lg:justify-end
           gap-8 sm:gap-12
-          text-gray-900
+          text-white
           text-center lg:text-right
         ">
           <div className="transition-transform hover:scale-105">
             <h3 className="text-4xl sm:text-5xl font-bold">10K+</h3>
-            <p className="text-sm text-gray-600 mt-1">Happy Customers</p>
+            <p className="text-sm text-gray-200 mt-1">Happy Customers</p>
           </div>
 
           <div className="transition-transform hover:scale-105">
             <h3 className="text-4xl sm:text-5xl font-bold">100K+</h3>
-            <p className="text-sm text-gray-600 mt-1 text-center lg:text-right">
+            <p className="text-sm text-gray-200 mt-1 text-center lg:text-right">
               Designs
             </p>
           </div>
 
           <div className="transition-transform hover:scale-105">
             <h3 className="text-4xl sm:text-5xl font-bold">1K+</h3>
-            <p className="text-sm text-gray-600 mt-1">Architects</p>
+            <p className="text-sm text-gray-200 mt-1">Architects</p>
           </div>
         </div>
       </div>

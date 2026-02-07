@@ -1,12 +1,34 @@
 import { Home, LayoutGrid, Package } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import woodenLaminates from "../../assets/Wooden Laminates.jpg";
 import bed2 from "../../assets/bed2.jpg";
 import slide2 from "../../assets/slide2.jpg";
 import featureInstallation from "../../assets/feature-installation.jpg";
 
 export default function CostCalculatorSection() {
+  const navigate = useNavigate();
+
+  const handleButtonClick = (cta) => {
+    switch (cta) {
+      case "Book Consultation":
+        navigate("/contact");
+        break;
+      case "View Offers":
+        navigate("/categories");
+        break;
+      case "See Projects":
+        navigate("/aboutus");
+        break;
+      case "Know More":
+        navigate("/contact");
+        break;
+      default:
+        break;
+    }
+  };
+
   return (
-    <section className="w-full bg-[#f6f1e8] py-16 sm:py-20">
+    <section className="w-full bg-[#EEF1F4] py-16 sm:py-20">
 
       {/* ===== SECTION TITLE ===== */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 mb-12 text-center">
@@ -17,7 +39,7 @@ export default function CostCalculatorSection() {
           <span
             className="
               font-bold bg-linear-to-r
-              from-yellow-500 to-yellow-300
+              from-slate-600 to-slate-400
               bg-clip-text text-transparent
             "
           >
@@ -96,10 +118,11 @@ export default function CostCalculatorSection() {
                   "
                 >
                   <button
+                    onClick={() => handleButtonClick(item.cta)}
                     className="
                       bg-white text-black text-sm font-medium
                       px-4 py-2 rounded-md w-fit
-                      hover:bg-yellow-300 transition
+                      hover:bg-slate-400 transition
                     "
                   >
                     {item.cta}

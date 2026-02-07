@@ -12,7 +12,7 @@ const slides = [
       "Discover our curated wallpaper collection, crafted to elevate every corner beautifully.",
     button: "Explore Our Collection",
     image: slide1_,
-    bg: "bg-[#7a554a]",
+    bg: "bg-[#6E6259]", // Warm Stone Taupe
   },
   {
     title: "Design Meets\nElegance.",
@@ -20,7 +20,7 @@ const slides = [
       "Premium finishes and textures that transform your interiors.",
     button: "View Designs",
     image: slide2_,
-    bg: "bg-[#6b4c3b]",
+    bg: "bg-[#5C6B5F]", // Soft Olive Grey
   },
   {
     title: "Create Timeless\nSpaces.",
@@ -28,7 +28,7 @@ const slides = [
       "Crafted for modern living with classic appeal.",
     button: "Browse Collection",
     image: slide3_,
-    bg: "bg-[#8b5e4a]",
+    bg: "bg-[#7A5C52]", // Muted Clay Brown
   },
   {
     title: "Transform Walls\nInto Art.",
@@ -36,9 +36,10 @@ const slides = [
       "Elevate your interiors with our exclusive wallpaper designs.",
     button: "Shop Now",
     image: slide4_,
-    bg: "bg-[#5c3a2e]",
+    bg: "bg-[#5F6461]", // Architectural Concrete Grey
   },
 ];
+
 
 export default function HeroSlider() {
   const [current, setCurrent] = useState(0);
@@ -134,7 +135,7 @@ export default function HeroSlider() {
           </div>
         ))}
       </div>
-
+      
       {/* LEFT ARROW */}
       <button
        onClick={prevSlide}

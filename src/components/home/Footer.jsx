@@ -13,8 +13,7 @@ export default function Footer() {
         className="
           max-w-7xl mx-auto px-6 py-16
           grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4
-          gap-12
-        "
+          gap-12"
       >
         {/* BRAND + VISION */}
         <div className="text-center sm:text-left">
@@ -79,13 +78,13 @@ export default function Footer() {
           </ul>
         </div>
 
-              <div className="text-center sm:text-left">
+        <div className="text-center sm:text-left">
           <h4 className="text-white font-semibold mb-4">
             Quick Links
           </h4>
 
           <ul className="space-y-3 text-sm">
-             <li>
+            <li>
               <Link to="/Faqs" className="hover:underline">
                 Faqs
               </Link>
@@ -102,26 +101,25 @@ export default function Footer() {
             </li>
           </ul>
           <div className="mt-6 py-2 border-t border-gray-700">
-          <h4 className="text-white font-semibold mb-4">
-            Follow US
-          </h4>
-          <div className="flex justify-center sm:justify-start space-x-4 mt-2">
-            <a href="https://www.facebook.com/" className="text-gray-400 hover:text-white">
-              <img src={facebookIcon} alt="Facebook" className="w-6 h-6" />
-            </a>
-            <a href="https://www.instagram.com/" className="text-gray-400 hover:text-white">
-              <img src={instagramIcon} alt="Instagram" className="w-6 h-6" />
-            </a>
-            <a href="https://www.linkedin.com/" className="text-gray-400 hover:text-white">
-              <img src={linkedinIcon} alt="LinkedIn" className="w-6 h-6" />
-            </a>
-            <a href="https://twitter.com/" className="text-gray-400 hover:text-white">
-            <img src={twitterIcon} alt="Twitter" className="w-6 h-6" />
-            </a>
+            <h4 className="text-white font-semibold mb-4">
+              Follow US
+            </h4>
+            <div className="flex justify-center sm:justify-start space-x-4 mt-2">
+              <a href="https://www.facebook.com/" target="_blank" className="text-gray-400 hover:text-white">
+                <img src={facebookIcon} alt="Facebook" className="w-6 h-6" />
+              </a>
+              <a href="https://www.instagram.com/" target="_blank" className="text-gray-400 hover:text-white">
+                <img src={instagramIcon} alt="Instagram" className="w-6 h-6" />
+              </a>
+              <a href="https://www.linkedin.com/" target="_blank" className="text-gray-400 hover:text-white">
+                <img src={linkedinIcon} alt="LinkedIn" className="w-6 h-6" />
+              </a>
+              <a href="https://twitter.com/" target="_blank" className="text-gray-400 hover:text-white">
+                <img src={twitterIcon} alt="Twitter" className="w-6 h-6" />
+              </a>
+            </div>
           </div>
         </div>
-        </div>
-
         {/* COMPANY INFO */}
         <div className="sm:col-span-2 lg:col-span-1 text-center sm:text-left">
           <h4 className="text-white font-semibold mb-4">
@@ -159,7 +157,7 @@ export default function Footer() {
           </span>
 
           <span>
-            Designed as per Elan-tech pvt limited Initiative
+            Designed as per elan-tech Initiative
           </span>
         </div>
       </div>

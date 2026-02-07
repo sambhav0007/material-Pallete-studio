@@ -1,5 +1,6 @@
 import { lazy, Suspense, useEffect, useState } from "react";
 import HeroSlider from "./HeroSlider.jsx";
+import FloatingActions from "./FloatingActions.jsx"; // ✅ LOCAL IMPORT
 import { ArrowUp } from "lucide-react";
 
 // Lazy-loaded sections
@@ -54,8 +55,11 @@ export default function Home() {
         </section>
 
         {/* FOOTER */}
-        <Footer />
+        {/* <Footer /> */}
       </Suspense>
+
+      {/* ================= FLOATING WHATSAPP + CALL ================= */}
+      <FloatingActions />
 
       {/* ================= SCROLL TO TOP BUTTON ================= */}
       {showScrollTop && (
@@ -63,7 +67,8 @@ export default function Home() {
           onClick={scrollToTop}
           aria-label="Scroll to top"
           className="
-            fixed bottom-6 right-6 z-50
+            fixed bottom-24 md:bottom-6 z-100
+            left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:right-6
             w-12 h-12
             rounded-full
             bg-black text-white
